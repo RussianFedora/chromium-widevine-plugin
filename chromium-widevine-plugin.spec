@@ -33,7 +33,7 @@ install -m755 opt/google/chrome/libwidevinecdm.so %{buildroot}%{_libdir}/chromiu
 
 %files
 %dir %{_libdir}/chromium-browser/
-%{_libdir}/chromium/libwidevinecdm.so
+%{_libdir}/chromium-browser/libwidevinecdm.so
 
 
 %changelog
