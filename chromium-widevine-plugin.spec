@@ -3,7 +3,7 @@
 Summary:	Chromium WideVine plugin
 Name:		chromium-widevine-plugin
 Version:	1.4.9.1088
-Release:	2%{?dist}
+Release:	3%{?dist}
 
 License:	Multiple, see https://chrome.google.com/
 Url:		http://www.google.com/chrome
@@ -29,14 +29,17 @@ rpm2cpio %{SOURCE0} | cpio -idmv
 
 %install
 mkdir -p %{buildroot}%{_libdir}/chromium/
-install -m755 opt/google/chrome/libwidevinecdm.so %{buildroot}%{_libdir}/chromium/
+install -m755 opt/google/chrome/libwidevinecdm.so %{buildroot}%{_libdir}/chromium-browser/
 
 %files
-%dir %{_libdir}/chromium/
+%dir %{_libdir}/chromium-browser/
 %{_libdir}/chromium/libwidevinecdm.so
 
 
 %changelog
+* Tue Jun  5 2018 Arkady L. Shane <ashejn@russianfedora.pro> 1.4.9.1088-3
+- fix path
+
 * Tue Jun  5 2018 Arkady L. Shane <ashejn@russianfedora.pro> 1.4.9.1088-2
 - fix Chromium name
 
