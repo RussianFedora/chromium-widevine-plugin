@@ -28,7 +28,7 @@ rpm2cpio %{SOURCE0} | cpio -idmv
 
 
 %install
-mkdir -p %{buildroot}%{_libdir}/chromium/
+mkdir -p %{buildroot}%{_libdir}/chromium-browser/
 install -m755 opt/google/chrome/libwidevinecdm.so %{buildroot}%{_libdir}/chromium-browser/
 
 %files
